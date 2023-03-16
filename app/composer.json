@@ -1,10 +1,12 @@
 {
-    "name": "garyclarke/translatethis",
-    "description": "A Docker demo app for garyclarke.tech",
+    "name": "radekvala/php-examples",
+    "description": "Small demo of basic PHP syntax based on a Docker demo app from garyclarke.",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
+            "name": "Radek Vala",
+            "email": "vala@utb.cz",
             "name": "Gary Clarke",
             "email": "info@garyclarke.tech"
         }
