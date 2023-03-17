@@ -1,4 +1,8 @@
 <?php
+    use App\Repository\UserRepository;
+    use App\Model\User;
+
+    require('../vendor/autoload.php');
 
     $username = trim($_POST['username']);
     $email = trim($_POST['email']);
@@ -16,12 +20,16 @@
         $error = "Password and its confirmation does not match";
     }
     else {
-
         // All validation passed, do something with the data
         // For example, save the user to a database
-        // And then redirect to a success page
-        header("Location: index.php?registration=success");
-        exit();
+
+        $user = new User($username, $email);
+        $userRepository = new UserRepository();
+        if ($userRepository->store($user)){
+            // And then redirect to a success page
+            header("Location: index.php?registration=success");
+            exit();
+        }
     }
 
     header("Location: index.php?error=$error");
