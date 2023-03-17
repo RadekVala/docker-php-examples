@@ -23,7 +23,10 @@
         // All validation passed, do something with the data
         // For example, save the user to a database
 
-        $user = new User($username, $email);
+        $user = new User();
+        $user->setUsername($username);
+        $user->setEmail($email);
+
         $userRepository = new UserRepository();
         if ($userRepository->store($user)){
             // And then redirect to a success page
