@@ -15,13 +15,13 @@ class UserRepository extends Repository
         $username = $user->getUsername();
         $email = $user->getEmail();
 
-        $stmt->bindParam(':name', $username);
-        $stmt->bindParam(':surname', $email);
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':email', $email);
 
         // Execute the statement
         try {
             $stmt->execute();
-            echo "User inserted successfully!";
+            return true;
         } catch(\PDOException $e) {
             die("Error inserting user: " . $e->getMessage());
         }
