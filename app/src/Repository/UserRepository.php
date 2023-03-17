@@ -26,4 +26,13 @@ class UserRepository extends Repository
             die("Error inserting user: " . $e->getMessage());
         }
     }
+
+    public function getAll(): array {
+        $stmt = $this->connection->query('SELECT * FROM user');
+        $stmt->setFetchMode(\PDO::FETCH_CLASS, User::class);
+
+        $results = $stmt->fetchAll();
+
+        return $results;
+    }
 }
