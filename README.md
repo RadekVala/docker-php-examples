@@ -16,6 +16,6 @@ Setup
 Contributing
 ------------
 
-Thank to Gary Clark for his docker containers and a very nice tutorial about Docker.
+Thanks to Gary Clark for his docker containers and a very nice tutorial about Docker.
 [1]: https://github.com/GaryClarke/docker-php
 [2]: https://youtu.be/qv-P_rPFw4c
