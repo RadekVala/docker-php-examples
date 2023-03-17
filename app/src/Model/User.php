@@ -8,12 +8,6 @@ class User
     private string $username;
     private string $email;
 
-    public function __construct($username, $email)
-    {
-        $this->username = $username;
-        $this->email = $email;
-    }
-
     public function getId(): int
     {
         return $this->id;
@@ -27,5 +21,15 @@ class User
     public function getEmail(): string
     {
         return $this->email;
+    }
+
+    public function setUsername($username): void
+    {
+        $this->username = $username;
+    }
+
+    public function setEmail($email): void
+    {
+        $this->email = $email;
     }
 }
