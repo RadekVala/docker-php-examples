@@ -58,6 +58,35 @@
             </form>
         </div>
     </div>
+
+    <div class="col-md-8">
+        <h1>Registered users</h1>
+        <?php
+        require ('../vendor/autoload.php');
+
+        use App\Repository\UserRepository;
+
+        $repo = new UserRepository();
+
+        $users = $repo->getAll();
+        ?>
+
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+
+            <?php foreach($users as $user) { ?>
+            <tr>
+                <td><?= $user->getId() ?></td>
+                <td><?= $user->getUsername() ?></td>
+                <td><?= $user->getEmail() ?></td>
+            </tr>
+            <?php } ?>
+        </table>
+    </div>
 </div>
 
 
