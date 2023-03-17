@@ -11,17 +11,11 @@ Setup
 ```sh ./bin/dev-mode.sh -d```
 * To run with Xdebug enabled, run 
 ```XDEBUG_MODE=debug sh ./bin/dev-mode.sh -d --build```
-
-
-Branches
--------------
-
-Each branch (except main, dev, and branches prefixed with 'feature') corresponds to an accompanying series lesson.   
+ 
 
 Contributing
 ------------
 
-Docker PHP is an Open Source project and contributions are welcome. The 'main' branch is read-only as this should not differ from the tutorials so please send pull requests to the develop branch.
-
+Thanks to Gary Clark for his docker containers and a very nice tutorial about Docker.
 [1]: https://github.com/GaryClarke/docker-php
 [2]: https://youtu.be/qv-P_rPFw4c
